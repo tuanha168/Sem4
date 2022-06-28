@@ -1,0 +1,40 @@
+input        { border:1px solid #808080; font-family: Verdana; font-size: 8pt; text-align: left; line-height: 100%;
+    padding-left: 0;
+    padding-right: 0; padding-top: 1; padding-bottom: 0; background-color:#FFFEF9; color:#4C865B }
+.checkbox    { border:0px solid #808080; font-family: Verdana; font-size: 8pt; text-align: left; line-height: 100%;
+    padding-left: 0;
+    padding-right: 0; padding-top: 1; padding-bottom: 0; background-color:#FFFEF9 }
+.content     { font-family: Verdana; font-size: 8pt }
+textarea     { border:1px solid #808080; font-family: Verdana; font-size: 8pt; text-align: left; line-height: 100%;
+    padding-left: 0;
+    padding-right: 4; padding-top: 1; padding-bottom: 1; background-color:#FFFEF9; color:#4C865B}
+select       { font-family: Verdana; font-size: 8pt; text-align: left; line-height: 100%;
+    padding-left: 4;
+    padding-right: 4; padding-top: 1; padding-bottom: 1; background-color:#FFFEF9; color:#4C865B }
+.thLeft      { font-family: Verdana; font-size: 8pt; text-align:left; padding-top:1; padding-bottom:1; background-color:#E9E5D9; border-left-width:1; border-right-style:solid; border-right-width:1; border-top-width:1; border-bottom-width:1; border-bottom-style:solid }
+.thCenter    { font-family: Verdana; font-size: 8pt; text-align:center; padding-top:1; padding-bottom:1; background-color:#E9E5D9; border-left-width:1; border-right-style:solid; border-right-width:1; border-top-width:1; border-bottom-width:1; color:#4C865B; font-weight:bold; border-bottom-style:solid }
+.thRight     { font-family: Verdana; font-size: 8pt; text-align:right; padding-top:1; padding-bottom:1; background-color:#E9E5D9; border-left-width:1; border-right-style:solid; border-right-width:1; border-top-width:1; border-bottom-width:1 }
+.tdTop       { font-size: 8pt; font-family: Verdana; border-left-width:1; border-right-width:1; border-bottom-style:solid; border-bottom-width:1; border-top-style:solid; border-top-width:1; padding-top:1; padding-bottom:1; border-right-style:solid; color:#5B5B5B }
+.tdOdd       { font-size: 8pt; font-family: Verdana; border-left-width:1; border-right-width:1; border-bottom-style:solid; border-bottom-width:1; padding-top:1; padding-bottom:1; border-right-style:solid; color:#5B5B5B }
+.tdOddRight  { font-size: 8pt; font-family: Verdana; border-left-width:1; border-right-width:1; text-align:right; border-bottom-style:solid; border-bottom-width:1; padding-top:1; padding-bottom:1; border-right-style:solid; color:#5B5B5B }
+.tdEven		 { font-size: 8pt; font-family: Verdana; border-left-width:1; border-right-width:1; background-color:#F7F7EF; border-bottom-style:solid; border-bottom-width:1; padding-top:1; padding-bottom:1; text-align:left; border-right-style:solid; color:#5B5B5B }
+.tdEvenRight { font-size: 8pt; font-family: Verdana; border-left-width:1; border-right-width:1; background-color:#F7F7EF; text-align:right; border-bottom-style:solid; border-bottom-width:1; padding-top:1; padding-bottom:1; border-right-style:solid; color:#5B5B5B }
+.table1      { border:1px solid #CFCFCF; padding:0}
+.tdLeftBanner{ font-size: 8pt; font-family: Verdana; border-left-width:1; border-right-width:1; padding-top:1; padding-bottom:1; border-right-style:solid; background-color:#E8EDE6; color:#4C865B }
+.tdNormal    { font-size: 8pt; font-family: Verdana; border-left-width:1; border-right-width:1; padding-top:1; padding-bottom:1; color:#4C865B;}
+.tdNormalRight{ font-size: 8pt; font-family: Verdana; border-left-width:1; border-right-width:1; padding-top:1; padding-bottom:1; color:#4C865B; text-align:right}
+
+.tdDate      { font-size: 8pt; font-family: Verdana; border-left-width:1; border-right-width:1; padding-top:1; padding-bottom:1; color:#505050; font-weight:bold }
+.tdBar       { font-size: 8pt; font-family: Verdana; border-left-width:1; border-right-width:1; padding-top:1; padding-bottom:1; color:#FFFFFF;  }
+
+.H1          { font-family: Arial; font-size: 16pt; color:#4C865B }
+.tableReport { border:1px solid #CFCFCF; padding:0}
+.tdReport    { padding:0; font-family:Verdana; font-size:8pt}
+
+.tableAccount{ border:0px solid #C3BFB3; padding:0}
+.thAccount	 { font-size: 8pt; font-family: Verdana; border-left-width:1; border-bottom-style:solid; border-bottom-width:2; padding-top:1; padding-bottom:1; color:#4C865B; font-weight:bold  }
+.tdAccount	 { font-size: 8pt; font-family: Verdana; border-left-width:1; border-bottom-style:solid; border-bottom-width:1; padding-top:1; padding-bottom:1; color:#5B5B5B  }
+a            { font-family: Verdana; font-size: 8pt; color:#5B5B5B; text-decoration:none }
+a:active     { font-family: Verdana; font-size: 8pt; color: #5B5B5B; text-decoration:underline }
+a:hover      { font-family: Verdana; font-size: 8pt; color:#5B5B5B; text-decoration:underline }
+a:link       { font-family: Verdana; font-size: 8pt; color:#5B5B5B; text-decoration:none }
