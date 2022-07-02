@@ -1,6 +1,8 @@
 package com.example.model;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name="user")
@@ -10,59 +12,15 @@ public class User {
     @Column(name="id")
     private int id;
     @Column(name="firstName")
-    String firstName;
+    private String firstName;
     @Column(name="lastName")
-    String lastName;
+    private String lastName;
     @Column(name="address")
-    String address;
+    private String address;
     @Column(name="email")
-    String email;
+    private String email;
     @Column(name="sex")
-    String sex; // false = female, true = male
-
-    public void setFirstName(String fn) {
-        firstName = fn;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setLastName(String ln) {
-        this.lastName = ln;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setAddress(String a) {
-        this.address = a;
-
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-    public boolean getSexBoolean() {
-        return !this.sex.equalsIgnoreCase("f");
-    }
+    private String sex; // false = female, true = male
 
     public int getId() {
         return id;
@@ -70,5 +28,53 @@ public class User {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    @OneToMany
+    @JoinColumn(name="user_id")
+    public Set<Product> products = new HashSet<>();
+
+    public Set<Product> getProducts() {
+        return products;
     }
 }

@@ -22,6 +22,9 @@ public class Product {
     @Column(name="price")
     private float price;
 
+    @ManyToOne
+    @JoinColumn(name="user_id", nullable=false)
+    private User user;
     public Product() {
     }
 
@@ -78,5 +81,13 @@ public class Product {
 
     public void setPrice(float price) {
         this.price = price;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

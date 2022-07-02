@@ -18,7 +18,7 @@
 <br/>
 <script>
     function doDelete(id){
-        var result = confirm('Do you really want to delete this user')
+        var result = confirm('Do you really want to delete this product')
         if(result) {
             document.location.href="productDelete.jsp?id=" + id;
         }
@@ -29,14 +29,21 @@
     function doAdd(){
         document.location.href = "productAdd.jsp";
     }
+    function doDeleteUser(id){
+        var result = confirm('Do you really want to delete this user')
+        if(result) {
+            document.location.href="deleteUser.jsp?id=" + id;
+        }
+        else {
+            return;
+        }
+    }
+    function doAddUser(){
+        document.location.href = "register.jsp";
+    }
 
 
 </script>
-<%
-    UsersService db = new UsersService();
-    User user = db.getUser(Integer.parseInt(request.getParameter("userId")));
-%>
-<%=user.getFirstName()%>
 <table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%">
     <tr>
         <td width="100%" colspan="2" height="55" background="images/TopBar.bmp"><table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2">
@@ -53,7 +60,7 @@
                     </tr>
                 </table>
                     <b><br>
-                        User</b>
+                        <a href="register.jsp">User</a></b>
                     <hr noshade color="#919191" size="1" width="120"></td>
             </tr>
         </table></td>
@@ -72,8 +79,8 @@
 
                         <%
                             //generate rows
-                            ProductService db = new ProductService();
-                            List<Product> productList = db.getAllProduct();
+                            ProductService productService = new ProductService();
+                            List<Product> productList = productService.getAllProduct();
                             if(productList.size()>0) {
                                 for (int i = 0; i < productList.size(); i++) {
                                     Product product = productList.get(i); %>
@@ -95,7 +102,46 @@
                     <input type="button" value="Add new Product" name="adduser" onClick="javascript:doAdd()">
                 </td>
             </tr>
+            <tr>
+                <td width="100%"><H1 class=H1>Users list</H1>
+                    <table class=table1 border="0" cellpadding="3" cellspacing="0" width="100%" style="border-collapse: collapse" bordercolor="#111111">
+                        <tr>
+                            <td class=thCenter>First Name
+                            <td class=thCenter>Last Name
+                            <td class=thCenter>Email
+                            <td class=thCenter>Sex
+                            <td class=thCenter>Address
+<%--                            <td class=thCenter>Products--%>
+                            <td class=thCenter>Action</td>
+                        </tr>
 
+                        <%
+                            //generate rows
+                            UsersService usersService = new UsersService();
+                            List<User> usersList = usersService.getAllUser();
+                            if(usersList.size()>0) {
+                                for (int i = 0; i < usersList.size(); i++) {
+                                    User user = usersList.get(i); %>
+                        <tr>
+                            <td class=tdTop><%= user.getFirstName() %></td>
+                            <td class=tdTop><%= user.getLastName() %></td>
+                            <td class=tdTop><%= user.getEmail() %></td>
+                            <td class=tdTop><%= user.getSex() == "F" ? "Female" : "Male" %></td>
+                            <td class=tdTop><%= user.getAddress() %></td>
+<%--                            <td class=tdTop><%= user.getProducts() %></td>--%>
+                            <td class=tdTop><a href="register.jsp?id=<%=user.getId() %>"> <img border="0" src="images/edit1.gif" width="17" height="17"></a>
+                                <a href="javascript:doDeleteUser(<%=user.getId() %>);">
+                                    <img border="0" src="images/delete1.gif" width="17" height="17"></a> </td>
+                        </tr>
+                        <%
+                                }
+                            }
+                        %>
+                    </table>
+                    <br>
+                    <input type="button" value="Add new User" name="adduser" onClick="javascript:doAddUser()">
+                </td>
+            </tr>
             </table>
         </td>
 
