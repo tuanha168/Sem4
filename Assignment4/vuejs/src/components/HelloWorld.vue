@@ -130,8 +130,7 @@ export default defineComponent({
       if (loading.value) return
       try {
         loading.value = true
-        const res = await axios.put(`${baseUrl}/employees/${formState.id}`, formState)
-        employees.value.push(res.data)
+        await axios.put(`${baseUrl}/employees/${formState.id}`, formState)
         visible.value = false
       } catch (e) {
         console.log(e)
