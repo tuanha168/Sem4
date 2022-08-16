@@ -157,8 +157,8 @@ export default defineComponent({
 
     const openModal = (id = null) => {
       Object.assign(formState, initialState)
+      isEdit.value = !!id
       if (id) {
-        isEdit.value = true
         const employee = employees.value.find((val) => val.id === id)
         formState.id = employee?.id
         formState.name = employee?.name
