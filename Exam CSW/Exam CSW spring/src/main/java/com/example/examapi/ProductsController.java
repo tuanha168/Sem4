@@ -42,12 +42,16 @@ public class ProductsController {
     @RequestMapping(value = "/api/products/sell/{id}", method = RequestMethod.PUT)
     public ResponseEntity<Object> sellProduct(
             @PathVariable("id") String id,
-            @RequestBody String product) {
+            @RequestBody Product product) {
         if (productsRepository.findById(Integer.parseInt(id)).isPresent()) {
             Product prod = productsRepository.findById(Integer.parseInt(id)).get();
-            prod.setQuantity(prod.getQuantity() - Integer.parseInt(product));
-            productsRepository.save(prod);
-            return new ResponseEntity<>("Product is sold", HttpStatus.NO_CONTENT);
+            Integer quantity = product.getQuantity();
+            if (quantity <= prod.getQuantity()) {
+                prod.setQuantity(prod.getQuantity() - quantity);
+                productsRepository.save(prod);
+                return new ResponseEntity<>("Product is sold", HttpStatus.NO_CONTENT);
+            }
+            return new ResponseEntity<>("Product is out of stocks", HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<>("Product not found", HttpStatus.NO_CONTENT);
     }

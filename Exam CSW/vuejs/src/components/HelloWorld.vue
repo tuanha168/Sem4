@@ -264,8 +264,8 @@ export default defineComponent({
       if (loading.value) return
       try {
         loading.value = true
-        await axios.put(`${baseUrl}/products/sell/${sellForm.id}`, { quantity: sellForm.quantity })
-        visible.value = false
+        await axios.put(`${baseUrl}/products/sell/${sellForm.id}`, sellForm)
+        visibleSellModal.value = false
       } catch (e) {
         console.log(e)
       } finally {
