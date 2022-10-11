@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">crudApplication</string>
+    <string name="gender">Gender</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="add_customer">Add Customer</string>
+    <string name="search_customer">Search Customer</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email_address">Email Address</string>
+    <string name="customer_name">Customer Name</string>
+</resources>

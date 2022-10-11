@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        tools:context=".MainActivity">
+
+    <TextView
+            android:id="@+id/texttitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Using SQLite!"
+            android:textSize="24sp"
+            android:layout_marginTop="20dp" />
+
+    <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/customer_name"
+            android:textSize="24sp"
+            android:layout_below="@+id/texttitle"
+            android:inputType="textPersonName" />
+
+    <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email_address"
+            android:layout_below="@+id/name"
+            android:inputType="none|textEmailAddress"
+            android:textSize="24sp" />
+
+    <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/phone_number"
+            android:textSize="24sp"
+            android:layout_below="@+id/email"
+            android:inputType="number" />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gender"
+            android:textSize="24sp"
+            android:id="@+id/genderTitle"
+            android:layout_below="@id/phone" />
+
+    <RadioGroup
+            android:id="@+id/gender"
+            android:layout_width="1000dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/phone"
+            android:layout_marginTop="-5dp"
+            android:layout_toRightOf="@id/gender"
+            android:layout_toEndOf="@id/gender" >
+
+        <RadioButton
+                android:text="@string/male"
+                android:textSize="20sp"
+                android:layout_gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        <RadioButton
+                android:text="@string/female"
+                android:layout_width="wrap_content"
+                android:layout_gravity="end"
+                android:textSize="20sp"
+                android:layout_marginTop="-48.5dp"
+                android:layout_marginRight="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="100dp" />
+    </RadioGroup>
+
+    <Button
+            android:id="@+id/btnInsert"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/add_customer"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/genderTitle"
+            android:layout_marginEnd="10dp" />
+
+    <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/search_customer"
+            android:layout_marginTop="50dp"
+            android:layout_toRightOf="@id/btnInsert"
+            android:layout_below="@id/genderTitle"
+            android:layout_toEndOf="@id/btnInsert" />
+
+
+</RelativeLayout>
