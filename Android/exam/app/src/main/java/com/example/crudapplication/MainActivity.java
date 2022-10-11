@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                Boolean checkInsertData = DB.insertuserdata(nameTXT, emailTXT, phoneTXT, genderTXT);
+                Boolean checkInsertData = DB.insertUserData(nameTXT, emailTXT, phoneTXT, genderTXT);
                 if (checkInsertData)
                     Toast.makeText(MainActivity.this, "Customer Added", Toast.LENGTH_SHORT).show();
                 else
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Cursor res = DB.getdata();
+                Cursor res = DB.getData();
                 if (res.getCount() == 0) {
                     Toast.makeText(MainActivity.this, "Customer not Exists", Toast.LENGTH_SHORT).show();
                     return;
