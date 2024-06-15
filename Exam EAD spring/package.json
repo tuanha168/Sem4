@@ -1,0 +1,19 @@
+{
+  "name": "exam-ead-spring",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "node watch-app.js",
+    "build": "node build-app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.21.5",
+    "esbuild-plugin-vue3": "^0.4.2",
+    "vue": "^3.4.29",
+    "vue-final-modal": "^4.5.4"
+  }
+}

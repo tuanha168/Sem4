@@ -1,0 +1,159 @@
+/* node_modules/vue-final-modal/dist/style.css */
+.vfm--fixed {
+  position: fixed;
+}
+.vfm--absolute {
+  position: absolute;
+}
+.vfm--inset {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.vfm--overlay {
+  z-index: -1;
+  background-color: #00000080;
+}
+.vfm--prevent-none {
+  pointer-events: none;
+}
+.vfm--prevent-auto {
+  pointer-events: auto;
+}
+.vfm--outline-none:focus {
+  outline: none;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.vfm-fade-enter-active {
+  animation: fade-in .3s ease;
+}
+.vfm-fade-leave-active {
+  animation: fade-out .3s ease;
+}
+.vfm-bounce-back {
+  transition-property: transform;
+  transition-duration: .3s;
+}
+.vfm-slide-up-enter-active,
+.vfm-slide-up-leave-active,
+.vfm-slide-down-enter-active,
+.vfm-slide-down-leave-active {
+  transition: transform .3s ease;
+}
+.vfm-slide-down-enter-from,
+.vfm-slide-down-leave-to {
+  transform: translateY(100vh) !important;
+}
+.vfm-slide-up-enter-from,
+.vfm-slide-up-leave-to {
+  transform: translateY(-100vh) !important;
+}
+.vfm-slide-right-enter-active,
+.vfm-slide-right-leave-active,
+.vfm-slide-left-enter-active,
+.vfm-slide-left-leave-active {
+  transition: transform .3s ease;
+}
+.vfm-slide-right-enter-from,
+.vfm-slide-right-leave-to {
+  transform: translate(100vw) !important;
+}
+.vfm-slide-left-enter-from,
+.vfm-slide-left-leave-to {
+  transform: translate(-100vw) !important;
+}
+.vfm-swipe-banner-back,
+.vfm-swipe-banner-forward {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 27px;
+  z-index: 10;
+}
+.vfm-swipe-banner-back {
+  left: 0;
+}
+.vfm-swipe-banner-forward {
+  right: 0;
+}
+
+/* sfc-style:/home/cirno/Documents/code/Sem4/Exam EAD/Exam EAD spring/app/components/Modal.vue?type=style&index=0 */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 0.5rem;
+}
+
+/* sfc-style:/home/cirno/Documents/code/Sem4/Exam EAD/Exam EAD spring/app/components/StudentFormModal.vue?type=style&index=0 */
+.form-control[data-v-ef75963d] {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* sfc-style:/home/cirno/Documents/code/Sem4/Exam EAD/Exam EAD spring/app/components/ScoreFormModal.vue?type=style&index=0 */
+.form-control[data-v-2cb76efe] {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* sfc-style:/home/cirno/Documents/code/Sem4/Exam EAD/Exam EAD spring/app/components/StudentList.vue?type=style&index=0 */
+.header[data-v-f4ce61d3] {
+  color: white;
+  background: green;
+  padding-inline: 10px;
+  padding-block: 5px;
+}
+.sub-header[data-v-f4ce61d3] {
+  text-align: center;
+  color: green;
+  font-size: 2em;
+}
+.btn-add[data-v-f4ce61d3] {
+  background: green;
+  color: white;
+  border: none;
+  padding-inline: 20px;
+  padding-block: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-add + .btn-add[data-v-f4ce61d3] {
+  margin-left: 10px;
+}
+.student-table[data-v-f4ce61d3] {
+  width: 100%;
+  thead[data-v-f4ce61d3] {
+    tr[data-v-f4ce61d3] {
+      background: green;
+      color: white;
+    }
+    th[data-v-f4ce61d3] {
+      text-align: left;
+    }
+  }
+}
